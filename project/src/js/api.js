@@ -1,7 +1,14 @@
-import cardCountrieTemplates from'../templates/cardCountrie.hbs'
+const BASE_URL="https://restcountries.eu/rest/v2"
 
-fetch('https://restcountries.eu/rest/v2/name/eesti')
-    .then(response => response.json())
-    .then(countrie => console.log(cardCountrieTemplates(countrie)))
-    
-// console.log(cardCountrieTemplates());
+export default {
+    feacthCountries(querySelector) {
+     return   fetch(`${BASE_URL}/name/${querySelector}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw response
+                }
+                return response.json()
+            })
+    }
+}
+

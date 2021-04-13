@@ -15,3 +15,40 @@ body {
 
   background-image: url('./images/bg-pattern.png');
 }
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+.title-hero{
+  display: flex;
+  justify-content: center;
+  text-decoration:underline
+
+}
+
+.section-type{
+  
+  display:flex;
+justify-content: space-around;
+height: 80px;
+
+}
+
+.search-form {
+
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  padding: 8px;
+ 
+
+}
+.button {
+  display: block;
+  padding: 5px;
+}
+
+
+
+
