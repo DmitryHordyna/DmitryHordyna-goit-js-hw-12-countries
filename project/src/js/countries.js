@@ -1,25 +1,17 @@
 import API from'./api'
 import cardCountrieTemplates from '../templates/countrie.hbs'
 import listCountriesTempletes from '../templates/countries-list.hbs'
+import refs from './refs'
 
-const refs = {
-    cardSection: document.querySelector('.js-countrie-section'),
-    formSearch: document.querySelector('.js-search-form'),
-    errorText: document.querySelector('.box-error_message'),
-    listCountries: document.querySelector('.list-countries'),
-    btnClean: document.querySelector('.js-button'),
-    input:document.querySelector('.form-control')
-    
-    
-}
+const debounce = require('lodash.debounce')
 let querySelector = "ukraine"
 
-refs.formSearch.addEventListener('input',onInputTypeCountrie)
+refs.input.addEventListener('input',debounce(onInputTypeCountrie,600))
 refs.btnClean.addEventListener('click', toCleanAllPageBtn)
 
 
-function onInputTypeCountrie(e) {
-    querySelector = e.currentTarget.elements.query.value;
+function onInputTypeCountrie() {
+  querySelector= refs.input.value
     if (querySelector === '') {
         return cleanAll()
     };
