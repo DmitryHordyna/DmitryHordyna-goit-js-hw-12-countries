@@ -8,8 +8,6 @@ const preloader = preloaderFactory('.preloader');
 const debounce = require('lodash.debounce');
 let querySelector;
 
-preloader.show();
-
 refs.input.addEventListener('input', debounce(onInputTypeCountrie, 800));
 refs.btnClean.addEventListener('click', toCleanAllPageBtn);
 
@@ -33,6 +31,10 @@ function onInputTypeCountrie() {
       .catch(error =>
         markupMessageManyCountries('Sorry, not found. Try again!!!'),
       );
+
+  if (querySelector === '') {
+    cleanAll();
+  }
 }
 
 function toCleanAllPageBtn(e) {
