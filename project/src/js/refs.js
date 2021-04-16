@@ -4,4 +4,5 @@ export default {
   listCountries: document.querySelector('.list-countries'),
   btnClean: document.querySelector('.js-button'),
   input: document.querySelector('.form-control'),
+  preloader: document.querySelector('.preloader'),
 };

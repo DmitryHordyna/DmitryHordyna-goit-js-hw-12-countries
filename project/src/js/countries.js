@@ -2,16 +2,21 @@ import API from './api';
 import cardCountrieTemplates from '../templates/countrie.hbs';
 import listCountriesTempletes from '../templates/countries-list.hbs';
 import refs from './refs';
+import preloaderFactory from './preloader/preloader';
 
+const preloader = preloaderFactory('.preloader');
 const debounce = require('lodash.debounce');
-let querySelector = 'ukraine';
+let querySelector;
 
-refs.input.addEventListener('input', debounce(onInputTypeCountrie, 600));
+preloader.show();
+
+refs.input.addEventListener('input', debounce(onInputTypeCountrie, 800));
 refs.btnClean.addEventListener('click', toCleanAllPageBtn);
 
 function onInputTypeCountrie() {
   querySelector = refs.input.value.trim();
-  console.log(querySelector);
+  preloader.show();
+
   querySelector &&
     API.feacthCountries(querySelector)
       .then(countrie => {
@@ -57,6 +62,7 @@ function markupFewCountries(countrie) {
 }
 
 function cleanAll() {
+  preloader.hide();
   refs.cardSection.textContent = '';
   refs.errorText.textContent = '';
   refs.listCountries.textContent = '';
