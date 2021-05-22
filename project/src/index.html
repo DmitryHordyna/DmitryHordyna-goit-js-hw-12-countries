@@ -4,30 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Webpack Starter Kit</title>
+    <title>Finder</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <h1 class="title-hero">Country Information</h1>
+    <h1 class="title-hero">Country Finder</h1>
 
     <section class="section section-type">
       <form class="form-inlane search-form js-search-form">
-        <label for="searchQuery"
-          >Type
-          <input
-            type="text"
-            class="form-control"
-            name="query"
-            id="searchQuery"
-            placeholder="your choose"
-            autocomplete="additional-name"
-          />
-        </label>
-        <button type="button" class="js-button">Clean</button>
+        <label for="searchQuery" class="label"></label>
+
+        <button type="button" class="js-button btn btn1">Clean</button>
+        <input
+          type="text"
+          class="form-control"
+          name="query"
+          id="searchQuery"
+          list="country-list"
+          placeholder=" Name country"
+        />
+        <div class="box-error"><p class="box-error_message"></p></div>
+        <div class="list-countries"></div>
       </form>
-      <div class="box-error"><p class="box-error_message"></p></div>
     </section>
-    <div class="list-countries"></div>
+
+    <!-- <div ></div> -->
     <div class="preloader disable">
       <div class="preloader__icon"></div>
     </div>

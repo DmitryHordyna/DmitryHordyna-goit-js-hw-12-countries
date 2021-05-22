@@ -1,32 +1,20 @@
-.list-countries {
-  background: linear-gradient(
-    rgba(76, 196, 29, 0.333),
-    rgba(196, 203, 224, 0.067)
-  );
-  list-style: none;
-  text-decoration: none;
-  margin-top: 10px;
-  padding-left: 20px;
-  border-radius: 5px;
-}
-.list-item-found_countries {
-  margin: 5px;
-}
-/*  background: linear-gradient(#e235, #68e1); */
-/* .box-error{
-  
-} */
 .box-error {
   width: 200px;
+  height: 30px;
+  position: absolute;
+  top: -15px;
+  left: 120%;
 }
 
 .box-error_message {
-  display: flex;
   justify-content: center;
   border-radius: 5px;
 
   text-align: center;
-  background: linear-gradient(#e235, #68e1);
+  background: linear-gradient(
+    rgba(238, 34, 51, 0.685),
+    rgba(10, 18, 43, 0.067)
+  );
 }
 .countries-card_img {
   padding: 15px;

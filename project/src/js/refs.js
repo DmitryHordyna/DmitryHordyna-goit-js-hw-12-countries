@@ -5,4 +5,5 @@ export default {
   btnClean: document.querySelector('.js-button'),
   input: document.querySelector('.form-control'),
   preloader: document.querySelector('.preloader'),
+  dataList: document.querySelector('#country-list'),
 };

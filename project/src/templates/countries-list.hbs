@@ -1,5 +1,6 @@
-<ul class="list-found_countries">
-    {{#each this}}
-    <li class="list-item-found_countries">{{this.name}};</li>
-    {{/each }}
-</ul>
+    <datalist id="country-list" >
+  
+            {{#each this}}
+            <option value={{this.name}}>{{this.name}}</option>>
+{{/each }}
+        </datalist>

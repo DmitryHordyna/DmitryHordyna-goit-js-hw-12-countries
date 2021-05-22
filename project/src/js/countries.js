@@ -25,6 +25,7 @@ function onInputTypeCountrie() {
         } else if (countrie.length > 1) {
           return markupFewCountries(countrie);
         } else {
+          console.log(countrie);
           return markupCardCountrie(countrie);
         }
       })
@@ -57,10 +58,7 @@ function markupMessageManyCountries(message) {
 
 function markupFewCountries(countrie) {
   cleanAll();
-  refs.listCountries.insertAdjacentHTML(
-    'beforeend',
-    listCountriesTempletes(countrie),
-  );
+  refs.listCountries.innerHTML = listCountriesTempletes(countrie);
 }
 
 function cleanAll() {

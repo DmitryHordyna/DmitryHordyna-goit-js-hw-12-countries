@@ -1,41 +1,44 @@
-.countrie-section{
-    border-radius: 5px;
-background: linear-gradient(rgba(34, 54, 238, 0.333), #68e1);
+.countrie-section {
+  margin-top: 30px;
+  border-radius: 5px;
+  background: linear-gradient(rgba(34, 54, 238, 0.333), #68e1);
 }
-.countries-card{
-      display:flex;
-      justify-content: space-around;
-    align-items: center;
+.countries-card {
+  color: aliceblue;
 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-.information-countries{
- padding: 15px;
+.information-countries {
+  border-radius: 10px;
+  background-color: rgba(63, 60, 60, 0.7);
+  padding: 15px;
 }
-.countries-name{
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 10px;
+.countries-name {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
 }
-.countries-card_list{
-
-   text-decoration: none;
-   list-style: none;
-   padding: 0;
+.countries-card_list {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
 }
-.countries-card_list_spanText{
-font-size: 16px;
-line-height: 1.18;
-font-weight: 600;
+.countries-card_list_spanText {
+  font-size: 16px;
+  line-height: 1.18;
+  font-weight: 600;
 }
-.countries-card_list_item{
-    padding: 0;
-    margin-top: 5px;
-     margin-bottom: 5px;
+.countries-card_list_item {
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
-.list-languages_item{
-    margin: 5px;
+.list-languages_item {
+  margin: 5px;
 }
-.countries-card_img{
+.countries-card_img {
   max-width: 35%;
 }

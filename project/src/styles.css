@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+
 html {
   box-sizing: border-box;
 }
@@ -9,34 +11,125 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: 'Fredericka the Great', cursive;
+  background-image: url('./images/map.jpg');
 }
-
+body::before {
+  content: '';
+  position: fixed; /* Фиксируем на одном месте */
+  left: 0;
+  right: 0; /* Вся ширин */
+  top: 0;
+  bottom: 0; /* Вся высота */
+  z-index: -1; /* Фон ниже текста */
+  /* Параметры фона */
+  background: url('./images/map.jpg') center / cover no-repeat;
+  filter: blur(1.5px); /* Размытие */
+}
+.background {
+  background-image: url('./images/map.jpg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  filter: blur(2px);
+}
 img {
   max-width: 100%;
   height: auto;
 }
+
 .title-hero {
+  border-radius: 10px;
+  background-color: rgba(63, 60, 60, 0.7);
+  margin: 0;
+  margin-bottom: 40px;
+  width: 400px;
   display: flex;
   justify-content: center;
-  text-decoration: underline;
+
+  margin: 50px auto 20px;
+
+  font-weight: 700;
+  font-style: italic;
+  font-size: 48px;
+
+  color: #91c9ff;
 }
 
-.section-type {
+.form-inlane {
+  position: relative;
+  font-family: 'Fredericka the Great';
+  border-radius: 10px;
+  width: 360px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px 20px;
+  text-align: center;
+  background-color: rgba(63, 60, 60, 0.7);
+}
+.label {
+  cursor: pointer;
   display: flex;
-  justify-content: space-around;
-  height: 80px;
+}
+.form-control {
+  color: aliceblue;
+  background-color: rgba(63, 60, 60, 0);
+  margin: 0 20px;
+  border: none;
+  border-bottom: 1px solid #91c9ff;
+  height: 30px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.form-control::placeholder {
+  color: aliceblue;
+  font-weight: 700;
+}
+.form-control:active,
+.form-control:focus {
+  background-color: rgba(63, 60, 60, 0);
+  outline: none;
 }
 
-.search-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px;
+.btn {
+  font-family: 'Fredericka the Great';
+  color: aliceblue;
+  width: 70px;
+
+  height: 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91c9ff;
+  outline: none;
+  transition: 1s ease-in-out;
+  font-style: italic;
+  font-weight: 700;
 }
-.button {
-  display: block;
-  padding: 5px;
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  background: coral;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn span {
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
 }
